@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container" id="container">
+<div class="form-container sign-up-container">
+
+<form action="">
+	<h1>Create Account</h1>
+	<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<input type="text" name="First name" placeholder="First name">
+	<input type="email" name="Last name" placeholder="Last name">
+    <input type="email" name="Email address" placeholder="Email address">
+	<input type="password" name="Password" placeholder="Password">
+    <input type="password" name="Confirm password" placeholder="Confirm password">
+	<button>SignUp</button>
+</form>
+</div>
+<div class="form-container sign-in-container">
+	<form action="#">
+		<h1>Login</h1>
+		<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<input type="email" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+    
+
+	<button>Login</button>
+	</form>
+</div>
+<div class="overlay-container">
+	<div class="overlay">
+		<div class="overlay-panel overlay-left">
+            <img src="/images/bag.png" alt="">
+            <p>Already a member?</p>
+			<button class="ghost" id="signIn"><a href="/Home/"></a>Login</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+            <img src="/images/ww.png" alt="">
+			<p>Not a member?</p>
+			<button class="ghost" id="signUp"><a href="/Home/"></a>SignUp</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>
+
+
+</body>
+</html>
